@@ -4,8 +4,8 @@ export interface Point {
 }
 
 export interface Zone {
-  center: Point
-  radius : number
+  center? : Point
+  radius? : number
   totalPopulation: number
   medianIncome: number
   composition?: Tract[]
@@ -13,7 +13,7 @@ export interface Zone {
 
 export interface Tract {
   id : string
-  geojson? : object
+  geojson : string
 }
 
 const _interpolationStrategy = {
